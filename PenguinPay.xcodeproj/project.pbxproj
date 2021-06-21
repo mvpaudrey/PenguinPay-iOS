@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		763713BB2680E75A006452F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713BA2680E75A006452F7 /* AppDelegate.swift */; };
-		763713BD2680E75A006452F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713BC2680E75A006452F7 /* SceneDelegate.swift */; };
-		763713BF2680E75A006452F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713BE2680E75A006452F7 /* ViewController.swift */; };
+		763713BF2680E75A006452F7 /* SendMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713BE2680E75A006452F7 /* SendMoneyViewController.swift */; };
 		763713C22680E75A006452F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763713C02680E75A006452F7 /* Main.storyboard */; };
 		763713C42680E75C006452F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763713C32680E75C006452F7 /* Assets.xcassets */; };
 		763713C72680E75C006452F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763713C52680E75C006452F7 /* LaunchScreen.storyboard */; };
 		763713D22680E75C006452F7 /* PenguinPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713D12680E75C006452F7 /* PenguinPayTests.swift */; };
 		763713DD2680E75C006452F7 /* PenguinPayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713DC2680E75C006452F7 /* PenguinPayUITests.swift */; };
+		763713EC2680ED82006452F7 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 763713EB2680ED82006452F7 /* IQKeyboardManagerSwift */; };
+		763713EF2680EE6C006452F7 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 763713EE2680EE6C006452F7 /* PhoneNumberKit */; };
+		763713F22680EF2A006452F7 /* Action in Frameworks */ = {isa = PBXBuildFile; productRef = 763713F12680EF2A006452F7 /* Action */; };
+		763713F52680F040006452F7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 763713F42680F040006452F7 /* RxSwift */; };
+		763713F72680F275006452F7 /* SendMoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713F62680F274006452F7 /* SendMoneyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +41,7 @@
 /* Begin PBXFileReference section */
 		763713B72680E75A006452F7 /* PenguinPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		763713BA2680E75A006452F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		763713BC2680E75A006452F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		763713BE2680E75A006452F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		763713BE2680E75A006452F7 /* SendMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyViewController.swift; sourceTree = "<group>"; };
 		763713C12680E75A006452F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		763713C32680E75C006452F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		763713C62680E75C006452F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		763713D82680E75C006452F7 /* PenguinPayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenguinPayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		763713DC2680E75C006452F7 /* PenguinPayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinPayUITests.swift; sourceTree = "<group>"; };
 		763713DE2680E75C006452F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		763713F62680F274006452F7 /* SendMoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				763713EC2680ED82006452F7 /* IQKeyboardManagerSwift in Frameworks */,
+				763713EF2680EE6C006452F7 /* PhoneNumberKit in Frameworks */,
+				763713F52680F040006452F7 /* RxSwift in Frameworks */,
+				763713F22680EF2A006452F7 /* Action in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				763713BA2680E75A006452F7 /* AppDelegate.swift */,
-				763713BC2680E75A006452F7 /* SceneDelegate.swift */,
-				763713BE2680E75A006452F7 /* ViewController.swift */,
-				763713C02680E75A006452F7 /* Main.storyboard */,
-				763713C32680E75C006452F7 /* Assets.xcassets */,
-				763713C52680E75C006452F7 /* LaunchScreen.storyboard */,
-				763713C82680E75C006452F7 /* Info.plist */,
+				763713F82680F27E006452F7 /* Screens */,
+				763713F92680F292006452F7 /* Resources */,
 			);
 			path = PenguinPay;
 			sourceTree = "<group>";
@@ -128,6 +132,26 @@
 			path = PenguinPayUITests;
 			sourceTree = "<group>";
 		};
+		763713F82680F27E006452F7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				763713BE2680E75A006452F7 /* SendMoneyViewController.swift */,
+				763713F62680F274006452F7 /* SendMoneyViewModel.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		763713F92680F292006452F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				763713C02680E75A006452F7 /* Main.storyboard */,
+				763713C32680E75C006452F7 /* Assets.xcassets */,
+				763713C52680E75C006452F7 /* LaunchScreen.storyboard */,
+				763713C82680E75C006452F7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +168,12 @@
 			dependencies = (
 			);
 			name = PenguinPay;
+			packageProductDependencies = (
+				763713EB2680ED82006452F7 /* IQKeyboardManagerSwift */,
+				763713EE2680EE6C006452F7 /* PhoneNumberKit */,
+				763713F12680EF2A006452F7 /* Action */,
+				763713F42680F040006452F7 /* RxSwift */,
+			);
 			productName = PenguinPay;
 			productReference = 763713B72680E75A006452F7 /* PenguinPay.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +245,12 @@
 				Base,
 			);
 			mainGroup = 763713AE2680E75A006452F7;
+			packageReferences = (
+				763713EA2680ED82006452F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				763713ED2680EE6C006452F7 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
+				763713F02680EF2A006452F7 /* XCRemoteSwiftPackageReference "Action" */,
+				763713F32680F040006452F7 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 763713B82680E75A006452F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				763713BF2680E75A006452F7 /* ViewController.swift in Sources */,
+				763713BF2680E75A006452F7 /* SendMoneyViewController.swift in Sources */,
+				763713F72680F275006452F7 /* SendMoneyViewModel.swift in Sources */,
 				763713BB2680E75A006452F7 /* AppDelegate.swift in Sources */,
-				763713BD2680E75A006452F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VEUVN4UK7N;
-				INFOPLIST_FILE = PenguinPay/Info.plist;
+				INFOPLIST_FILE = PenguinPay/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VEUVN4UK7N;
-				INFOPLIST_FILE = PenguinPay/Info.plist;
+				INFOPLIST_FILE = PenguinPay/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +629,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		763713EA2680ED82006452F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+		763713ED2680EE6C006452F7 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.3;
+			};
+		};
+		763713F02680EF2A006452F7 /* XCRemoteSwiftPackageReference "Action" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/Action.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+		763713F32680F040006452F7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		763713EB2680ED82006452F7 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 763713EA2680ED82006452F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		763713EE2680EE6C006452F7 /* PhoneNumberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 763713ED2680EE6C006452F7 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = PhoneNumberKit;
+		};
+		763713F12680EF2A006452F7 /* Action */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 763713F02680EF2A006452F7 /* XCRemoteSwiftPackageReference "Action" */;
+			productName = Action;
+		};
+		763713F42680F040006452F7 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 763713F32680F040006452F7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 763713AF2680E75A006452F7 /* Project object */;
 }
