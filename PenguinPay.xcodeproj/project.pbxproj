@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		763713BB2680E75A006452F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713BA2680E75A006452F7 /* AppDelegate.swift */; };
+		763713BD2680E75A006452F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713BC2680E75A006452F7 /* SceneDelegate.swift */; };
+		763713BF2680E75A006452F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713BE2680E75A006452F7 /* ViewController.swift */; };
+		763713C22680E75A006452F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763713C02680E75A006452F7 /* Main.storyboard */; };
+		763713C42680E75C006452F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763713C32680E75C006452F7 /* Assets.xcassets */; };
+		763713C72680E75C006452F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763713C52680E75C006452F7 /* LaunchScreen.storyboard */; };
+		763713D22680E75C006452F7 /* PenguinPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713D12680E75C006452F7 /* PenguinPayTests.swift */; };
+		763713DD2680E75C006452F7 /* PenguinPayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713DC2680E75C006452F7 /* PenguinPayUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		763713CE2680E75C006452F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 763713AF2680E75A006452F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 763713B62680E75A006452F7;
+			remoteInfo = PenguinPay;
+		};
+		763713D92680E75C006452F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 763713AF2680E75A006452F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 763713B62680E75A006452F7;
+			remoteInfo = PenguinPay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		763713B72680E75A006452F7 /* PenguinPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		763713BA2680E75A006452F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		763713BC2680E75A006452F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		763713BE2680E75A006452F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		763713C12680E75A006452F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		763713C32680E75C006452F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		763713C62680E75C006452F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		763713C82680E75C006452F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		763713CD2680E75C006452F7 /* PenguinPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenguinPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		763713D12680E75C006452F7 /* PenguinPayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinPayTests.swift; sourceTree = "<group>"; };
+		763713D32680E75C006452F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		763713D82680E75C006452F7 /* PenguinPayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PenguinPayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		763713DC2680E75C006452F7 /* PenguinPayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinPayUITests.swift; sourceTree = "<group>"; };
+		763713DE2680E75C006452F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		763713B42680E75A006452F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		763713CA2680E75C006452F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		763713D52680E75C006452F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		763713AE2680E75A006452F7 = {
+			isa = PBXGroup;
+			children = (
+				763713B92680E75A006452F7 /* PenguinPay */,
+				763713D02680E75C006452F7 /* PenguinPayTests */,
+				763713DB2680E75C006452F7 /* PenguinPayUITests */,
+				763713B82680E75A006452F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		763713B82680E75A006452F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				763713B72680E75A006452F7 /* PenguinPay.app */,
+				763713CD2680E75C006452F7 /* PenguinPayTests.xctest */,
+				763713D82680E75C006452F7 /* PenguinPayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		763713B92680E75A006452F7 /* PenguinPay */ = {
+			isa = PBXGroup;
+			children = (
+				763713BA2680E75A006452F7 /* AppDelegate.swift */,
+				763713BC2680E75A006452F7 /* SceneDelegate.swift */,
+				763713BE2680E75A006452F7 /* ViewController.swift */,
+				763713C02680E75A006452F7 /* Main.storyboard */,
+				763713C32680E75C006452F7 /* Assets.xcassets */,
+				763713C52680E75C006452F7 /* LaunchScreen.storyboard */,
+				763713C82680E75C006452F7 /* Info.plist */,
+			);
+			path = PenguinPay;
+			sourceTree = "<group>";
+		};
+		763713D02680E75C006452F7 /* PenguinPayTests */ = {
+			isa = PBXGroup;
+			children = (
+				763713D12680E75C006452F7 /* PenguinPayTests.swift */,
+				763713D32680E75C006452F7 /* Info.plist */,
+			);
+			path = PenguinPayTests;
+			sourceTree = "<group>";
+		};
+		763713DB2680E75C006452F7 /* PenguinPayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				763713DC2680E75C006452F7 /* PenguinPayUITests.swift */,
+				763713DE2680E75C006452F7 /* Info.plist */,
+			);
+			path = PenguinPayUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		763713B62680E75A006452F7 /* PenguinPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 763713E12680E75C006452F7 /* Build configuration list for PBXNativeTarget "PenguinPay" */;
+			buildPhases = (
+				763713B32680E75A006452F7 /* Sources */,
+				763713B42680E75A006452F7 /* Frameworks */,
+				763713B52680E75A006452F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PenguinPay;
+			productName = PenguinPay;
+			productReference = 763713B72680E75A006452F7 /* PenguinPay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		763713CC2680E75C006452F7 /* PenguinPayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 763713E42680E75C006452F7 /* Build configuration list for PBXNativeTarget "PenguinPayTests" */;
+			buildPhases = (
+				763713C92680E75C006452F7 /* Sources */,
+				763713CA2680E75C006452F7 /* Frameworks */,
+				763713CB2680E75C006452F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				763713CF2680E75C006452F7 /* PBXTargetDependency */,
+			);
+			name = PenguinPayTests;
+			productName = PenguinPayTests;
+			productReference = 763713CD2680E75C006452F7 /* PenguinPayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		763713D72680E75C006452F7 /* PenguinPayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 763713E72680E75C006452F7 /* Build configuration list for PBXNativeTarget "PenguinPayUITests" */;
+			buildPhases = (
+				763713D42680E75C006452F7 /* Sources */,
+				763713D52680E75C006452F7 /* Frameworks */,
+				763713D62680E75C006452F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				763713DA2680E75C006452F7 /* PBXTargetDependency */,
+			);
+			name = PenguinPayUITests;
+			productName = PenguinPayUITests;
+			productReference = 763713D82680E75C006452F7 /* PenguinPayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		763713AF2680E75A006452F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					763713B62680E75A006452F7 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					763713CC2680E75C006452F7 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 763713B62680E75A006452F7;
+					};
+					763713D72680E75C006452F7 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 763713B62680E75A006452F7;
+					};
+				};
+			};
+			buildConfigurationList = 763713B22680E75A006452F7 /* Build configuration list for PBXProject "PenguinPay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 763713AE2680E75A006452F7;
+			productRefGroup = 763713B82680E75A006452F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				763713B62680E75A006452F7 /* PenguinPay */,
+				763713CC2680E75C006452F7 /* PenguinPayTests */,
+				763713D72680E75C006452F7 /* PenguinPayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		763713B52680E75A006452F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763713C72680E75C006452F7 /* LaunchScreen.storyboard in Resources */,
+				763713C42680E75C006452F7 /* Assets.xcassets in Resources */,
+				763713C22680E75A006452F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		763713CB2680E75C006452F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		763713D62680E75C006452F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		763713B32680E75A006452F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763713BF2680E75A006452F7 /* ViewController.swift in Sources */,
+				763713BB2680E75A006452F7 /* AppDelegate.swift in Sources */,
+				763713BD2680E75A006452F7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		763713C92680E75C006452F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763713D22680E75C006452F7 /* PenguinPayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		763713D42680E75C006452F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763713DD2680E75C006452F7 /* PenguinPayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		763713CF2680E75C006452F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 763713B62680E75A006452F7 /* PenguinPay */;
+			targetProxy = 763713CE2680E75C006452F7 /* PBXContainerItemProxy */;
+		};
+		763713DA2680E75C006452F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 763713B62680E75A006452F7 /* PenguinPay */;
+			targetProxy = 763713D92680E75C006452F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		763713C02680E75A006452F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				763713C12680E75A006452F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		763713C52680E75C006452F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				763713C62680E75C006452F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		763713DF2680E75C006452F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		763713E02680E75C006452F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		763713E22680E75C006452F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VEUVN4UK7N;
+				INFOPLIST_FILE = PenguinPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zebaze.PenguinPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		763713E32680E75C006452F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VEUVN4UK7N;
+				INFOPLIST_FILE = PenguinPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zebaze.PenguinPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		763713E52680E75C006452F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VEUVN4UK7N;
+				INFOPLIST_FILE = PenguinPayTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zebaze.PenguinPayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PenguinPay.app/PenguinPay";
+			};
+			name = Debug;
+		};
+		763713E62680E75C006452F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VEUVN4UK7N;
+				INFOPLIST_FILE = PenguinPayTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zebaze.PenguinPayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PenguinPay.app/PenguinPay";
+			};
+			name = Release;
+		};
+		763713E82680E75C006452F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VEUVN4UK7N;
+				INFOPLIST_FILE = PenguinPayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zebaze.PenguinPayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PenguinPay;
+			};
+			name = Debug;
+		};
+		763713E92680E75C006452F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VEUVN4UK7N;
+				INFOPLIST_FILE = PenguinPayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zebaze.PenguinPayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PenguinPay;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		763713B22680E75A006452F7 /* Build configuration list for PBXProject "PenguinPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				763713DF2680E75C006452F7 /* Debug */,
+				763713E02680E75C006452F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		763713E12680E75C006452F7 /* Build configuration list for PBXNativeTarget "PenguinPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				763713E22680E75C006452F7 /* Debug */,
+				763713E32680E75C006452F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		763713E42680E75C006452F7 /* Build configuration list for PBXNativeTarget "PenguinPayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				763713E52680E75C006452F7 /* Debug */,
+				763713E62680E75C006452F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		763713E72680E75C006452F7 /* Build configuration list for PBXNativeTarget "PenguinPayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				763713E82680E75C006452F7 /* Debug */,
+				763713E92680E75C006452F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 763713AF2680E75A006452F7 /* Project object */;
+}
