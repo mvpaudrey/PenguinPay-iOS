@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7m5-mh-GQH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,31 +10,171 @@
     </dependencies>
     <scenes>
         <!--Send Money View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="eAC-bg-16V">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SendMoneyViewController" customModule="PenguinPay" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="7m5-mh-GQH" customClass="SendMoneyViewController" customModule="PenguinPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4DJ-AM-tCF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PenguinPay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3R-Q1-ojP">
-                                <rect key="frame" x="121.5" y="432.5" width="171.5" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kf0-Jk-QIb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcW-Ih-2wi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="658.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-CC-9Np">
+                                                <rect key="frame" x="40" y="100" width="334" height="458.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PenguinPay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE2-uL-2E4" userLabel="Title Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="df8-os-rKo">
+                                                        <rect key="frame" x="0.0" y="44" width="334" height="20"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="qTZ-8Z-y5a"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJl-Za-Gj8" userLabel="FirstName Text Field" customClass="FormTextField" customModule="PenguinPay" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="79" width="334" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="KqF-OS-K0d"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chz-Ai-TQc" userLabel="Lastname Text Field" customClass="FormTextField" customModule="PenguinPay" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="139" width="334" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="family-name"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FWD-uX-mCr" userLabel="Phone Number Text Field" customClass="NumberTextField" customModule="PenguinPay" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="199" width="334" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount to send" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSH-gN-clN" userLabel="Amount Text Field" customClass="FormTextField" customModule="PenguinPay" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="259" width="334" height="45"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your recipient will receive:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3v-qe-D3a" userLabel="Received Amount Title Label">
+                                                        <rect key="frame" x="0.0" y="319" width="334" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="0.3921568627" green="0.41568627450000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qm-kU-fZ0">
+                                                        <rect key="frame" x="0.0" y="348.5" width="334" height="50"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgW-AB-I25">
+                                                                <rect key="frame" x="0.0" y="0.0" width="259" height="50"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-0q-QMr" userLabel="Recipient Amount Label">
+                                                                        <rect key="frame" x="10" y="0.0" width="239" height="50"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="AiY-0q-QMr" secondAttribute="trailing" constant="10" id="9dE-up-lgA"/>
+                                                                    <constraint firstItem="AiY-0q-QMr" firstAttribute="leading" secondItem="dgW-AB-I25" secondAttribute="leading" constant="10" id="cdm-rj-e5g"/>
+                                                                    <constraint firstItem="AiY-0q-QMr" firstAttribute="top" secondItem="dgW-AB-I25" secondAttribute="top" id="lLc-ps-NTp"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="AiY-0q-QMr" secondAttribute="bottom" id="ruF-mx-frc"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH3-6L-xTq">
+                                                                <rect key="frame" x="259" y="0.0" width="75" height="50"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehq-4M-vw1" userLabel="Currency Label">
+                                                                        <rect key="frame" x="16.5" y="13" width="42" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="ehq-4M-vw1" firstAttribute="centerY" secondItem="xH3-6L-xTq" secondAttribute="centerY" id="9KE-Kp-Wgz"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="JAC-P8-NaU"/>
+                                                                    <constraint firstItem="ehq-4M-vw1" firstAttribute="centerX" secondItem="xH3-6L-xTq" secondAttribute="centerX" id="eFT-lt-HPE"/>
+                                                                    <constraint firstAttribute="width" constant="75" id="nP2-lN-2X1"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tP5-hg-WQ9" userLabel="Send Button" customClass="RoundedButton" customModule="PenguinPay" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="413.5" width="334" height="45"/>
+                                                        <state key="normal" title="SEND"/>
+                                                        <state key="disabled" title="SEND"/>
+                                                        <state key="selected" title="SEND"/>
+                                                        <state key="highlighted" title="SUBMIT"/>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="tP5-hg-WQ9" firstAttribute="height" secondItem="PJl-Za-Gj8" secondAttribute="height" id="KtM-oU-h9Q"/>
+                                                    <constraint firstItem="chz-Ai-TQc" firstAttribute="height" secondItem="PJl-Za-Gj8" secondAttribute="height" id="Tzq-wr-fWa"/>
+                                                    <constraint firstItem="FSH-gN-clN" firstAttribute="height" secondItem="PJl-Za-Gj8" secondAttribute="height" id="XJb-bX-G6C"/>
+                                                    <constraint firstItem="FWD-uX-mCr" firstAttribute="height" secondItem="chz-Ai-TQc" secondAttribute="height" id="irX-HD-k6a"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="HJt-CC-9Np" secondAttribute="bottom" constant="100" id="ARN-MA-tjW"/>
+                                            <constraint firstAttribute="trailing" secondItem="HJt-CC-9Np" secondAttribute="trailing" constant="40" id="Hfz-Aj-C4T"/>
+                                            <constraint firstItem="HJt-CC-9Np" firstAttribute="leading" secondItem="IcW-Ih-2wi" secondAttribute="leading" constant="40" id="lBb-sN-rCH"/>
+                                            <constraint firstItem="HJt-CC-9Np" firstAttribute="top" secondItem="IcW-Ih-2wi" secondAttribute="top" constant="100" id="vlU-3I-3aY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IcW-Ih-2wi" firstAttribute="bottom" secondItem="Y0z-A2-0WA" secondAttribute="bottom" id="17T-qK-HwA"/>
+                                    <constraint firstItem="IcW-Ih-2wi" firstAttribute="width" secondItem="DIH-3P-l6c" secondAttribute="width" id="B9k-Ft-IuZ"/>
+                                    <constraint firstItem="IcW-Ih-2wi" firstAttribute="leading" secondItem="Y0z-A2-0WA" secondAttribute="leading" id="NHW-oH-D9F"/>
+                                    <constraint firstItem="IcW-Ih-2wi" firstAttribute="trailing" secondItem="Y0z-A2-0WA" secondAttribute="trailing" id="eDd-RC-GvL"/>
+                                    <constraint firstItem="IcW-Ih-2wi" firstAttribute="top" secondItem="Y0z-A2-0WA" secondAttribute="top" id="sRz-qt-xsg"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Y0z-A2-0WA"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="DIH-3P-l6c"/>
+                            </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="31P-6J-f8m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="O3R-Q1-ojP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DCl-3F-DA5"/>
-                            <constraint firstItem="O3R-Q1-ojP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="jMD-1K-AjC"/>
+                            <constraint firstItem="31P-6J-f8m" firstAttribute="bottom" secondItem="kf0-Jk-QIb" secondAttribute="bottom" id="EHI-hh-RuP"/>
+                            <constraint firstItem="kf0-Jk-QIb" firstAttribute="top" secondItem="31P-6J-f8m" secondAttribute="top" id="juU-b3-mVX"/>
+                            <constraint firstItem="31P-6J-f8m" firstAttribute="trailing" secondItem="kf0-Jk-QIb" secondAttribute="trailing" id="oi2-hf-5NF"/>
+                            <constraint firstItem="kf0-Jk-QIb" firstAttribute="leading" secondItem="31P-6J-f8m" secondAttribute="leading" id="zsq-37-uea"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="FSH-gN-clN" id="In1-1T-y96"/>
+                        <outlet property="currencyLabel" destination="ehq-4M-vw1" id="Ai6-Z1-Iqz"/>
+                        <outlet property="firstnameTextField" destination="PJl-Za-Gj8" id="QJc-eF-Pub"/>
+                        <outlet property="lastnameTextField" destination="chz-Ai-TQc" id="5oH-L5-ia1"/>
+                        <outlet property="phoneNumberTextField" destination="FWD-uX-mCr" id="1bU-4I-fru"/>
+                        <outlet property="recipientAmountLabel" destination="AiY-0q-QMr" id="R4S-1e-vpU"/>
+                        <outlet property="sendButton" destination="tP5-hg-WQ9" id="J1e-I4-O7h"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zg-86-ujw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="95"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
