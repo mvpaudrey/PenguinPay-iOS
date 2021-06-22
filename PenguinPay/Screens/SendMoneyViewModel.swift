@@ -11,7 +11,7 @@ import RxCocoa
 import Action
 import CoreGraphics
 
-class SendMoneyViewModel {
+final class SendMoneyViewModel {
 
     let firstnameSubject = BehaviorRelay<String?>(value: nil)
     let lastnameSubject = BehaviorRelay<String?>(value: nil)

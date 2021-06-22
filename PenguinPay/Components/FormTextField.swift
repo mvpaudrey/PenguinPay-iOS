@@ -7,17 +7,15 @@
 
 import UIKit
 
-open class FormTextField: UITextField, UITextFieldDelegate {
+open class FormTextField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         commonInit()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-
         commonInit()
     }
 
@@ -43,6 +41,15 @@ open class FormTextField: UITextField, UITextFieldDelegate {
         let textPadding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
         let rect = super.editingRect(forBounds: bounds)
         return rect.inset(by: textPadding)
+    }
+
+}
+
+extension FormTextField: UITextFieldDelegate {
+
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

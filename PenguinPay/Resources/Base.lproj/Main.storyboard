@@ -21,10 +21,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcW-Ih-2wi">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="658.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="608.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-CC-9Np">
-                                                <rect key="frame" x="40" y="100" width="334" height="458.5"/>
+                                                <rect key="frame" x="40" y="50" width="334" height="458.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PenguinPay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE2-uL-2E4" userLabel="Title Label">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="29"/>
@@ -68,7 +68,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount to send" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSH-gN-clN" userLabel="Amount Text Field" customClass="FormTextField" customModule="PenguinPay" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="259" width="334" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your recipient will receive:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3v-qe-D3a" userLabel="Received Amount Title Label">
                                                         <rect key="frame" x="0.0" y="319" width="334" height="14.5"/>
@@ -138,7 +138,7 @@
                                             <constraint firstAttribute="bottom" secondItem="HJt-CC-9Np" secondAttribute="bottom" constant="100" id="ARN-MA-tjW"/>
                                             <constraint firstAttribute="trailing" secondItem="HJt-CC-9Np" secondAttribute="trailing" constant="40" id="Hfz-Aj-C4T"/>
                                             <constraint firstItem="HJt-CC-9Np" firstAttribute="leading" secondItem="IcW-Ih-2wi" secondAttribute="leading" constant="40" id="lBb-sN-rCH"/>
-                                            <constraint firstItem="HJt-CC-9Np" firstAttribute="top" secondItem="IcW-Ih-2wi" secondAttribute="top" constant="100" id="vlU-3I-3aY"/>
+                                            <constraint firstItem="HJt-CC-9Np" firstAttribute="top" secondItem="IcW-Ih-2wi" secondAttribute="top" constant="50" id="vlU-3I-3aY"/>
                                         </constraints>
                                     </view>
                                 </subviews>

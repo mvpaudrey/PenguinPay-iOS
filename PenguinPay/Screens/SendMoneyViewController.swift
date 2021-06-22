@@ -45,10 +45,11 @@ class SendMoneyViewController: BaseViewController {
             .switchLatest()
             .subscribe(onNext: { formData in
                 print(formData.parameters as Any)
-                // Show a notification that money has been sent
+                // Show an in app notification that money has been sent
             }) => rxbag
 
-        formViewModel.formSubmittingSubject.skip(1)
+        formViewModel.formSubmittingSubject
+            .skip(1)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
                 self.view.endEditing(true)
@@ -59,9 +60,13 @@ class SendMoneyViewController: BaseViewController {
 
     func configUI() {
         firstnameTextField.inputType = .firstname
+        firstnameTextField.returnKeyType = .next
         lastnameTextField.inputType = .lastname
+        lastnameTextField.returnKeyType = .next
         phoneNumberTextField.inputType = .phoneNumber
+        phoneNumberTextField.returnKeyType = .next
         amountTextField.inputType = .decimal
+        amountTextField.returnKeyType = .done
     }
 
 }
