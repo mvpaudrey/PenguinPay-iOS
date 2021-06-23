@@ -40,6 +40,14 @@
 		76887F962681DB2A00EC2E79 /* CountryPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F952681DB2A00EC2E79 /* CountryPickerViewModel.swift */; };
 		76887F982681E63C00EC2E79 /* CountryPickerViewController+Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F972681E63C00EC2E79 /* CountryPickerViewController+Country.swift */; };
 		76887F9A2681E65500EC2E79 /* CountryPickerViewController+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F992681E65500EC2E79 /* CountryPickerViewController+Cell.swift */; };
+		76887F9D26821F4300EC2E79 /* OpenExchangeRatesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F9C26821F4300EC2E79 /* OpenExchangeRatesClient.swift */; };
+		76887F9F26821F5500EC2E79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F9E26821F5500EC2E79 /* Constants.swift */; };
+		76887FA22682223400EC2E79 /* OpenExchangeRatesPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FA12682223400EC2E79 /* OpenExchangeRatesPayload.swift */; };
+		76887FA42682247C00EC2E79 /* OpenExchangeRatesServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FA32682247C00EC2E79 /* OpenExchangeRatesServiceError.swift */; };
+		76887FA626822BBB00EC2E79 /* CountryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FA526822BBB00EC2E79 /* CountryId.swift */; };
+		76887FD52682F42000EC2E79 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FD42682F42000EC2E79 /* Currency.swift */; };
+		76887FD72682F6C900EC2E79 /* RatesPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FD62682F6C900EC2E79 /* RatesPayload.swift */; };
+		76887FD92682F80E00EC2E79 /* DecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FD82682F80E00EC2E79 /* DecodingError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +101,14 @@
 		76887F952681DB2A00EC2E79 /* CountryPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewModel.swift; sourceTree = "<group>"; };
 		76887F972681E63C00EC2E79 /* CountryPickerViewController+Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryPickerViewController+Country.swift"; sourceTree = "<group>"; };
 		76887F992681E65500EC2E79 /* CountryPickerViewController+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryPickerViewController+Cell.swift"; sourceTree = "<group>"; };
+		76887F9C26821F4300EC2E79 /* OpenExchangeRatesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRatesClient.swift; sourceTree = "<group>"; };
+		76887F9E26821F5500EC2E79 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		76887FA12682223400EC2E79 /* OpenExchangeRatesPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRatesPayload.swift; sourceTree = "<group>"; };
+		76887FA32682247C00EC2E79 /* OpenExchangeRatesServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRatesServiceError.swift; sourceTree = "<group>"; };
+		76887FA526822BBB00EC2E79 /* CountryId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryId.swift; sourceTree = "<group>"; };
+		76887FD42682F42000EC2E79 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		76887FD62682F6C900EC2E79 /* RatesPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesPayload.swift; sourceTree = "<group>"; };
+		76887FD82682F80E00EC2E79 /* DecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				763713BA2680E75A006452F7 /* AppDelegate.swift */,
+				76887F9E26821F5500EC2E79 /* Constants.swift */,
 				763713FC2680F672006452F7 /* Components */,
+				76887FA02682220400EC2E79 /* Models */,
+				76887F9B26821F0700EC2E79 /* Services */,
 				7637141026814D93006452F7 /* DomainModels */,
 				763713F82680F27E006452F7 /* Screens */,
 				7637143426815BFD006452F7 /* Helpers */,
@@ -240,7 +259,9 @@
 		7637141026814D93006452F7 /* DomainModels */ = {
 			isa = PBXGroup;
 			children = (
+				76887FD42682F42000EC2E79 /* Currency.swift */,
 				7637141126814E06006452F7 /* Form.swift */,
+				76887FA526822BBB00EC2E79 /* CountryId.swift */,
 			);
 			path = DomainModels;
 			sourceTree = "<group>";
@@ -275,6 +296,25 @@
 				76887F8F2681AFFF00EC2E79 /* PhoneNumberKit+Extensions.swift */,
 			);
 			path = PhoneNumberKit;
+			sourceTree = "<group>";
+		};
+		76887F9B26821F0700EC2E79 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				76887F9C26821F4300EC2E79 /* OpenExchangeRatesClient.swift */,
+				76887FA32682247C00EC2E79 /* OpenExchangeRatesServiceError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		76887FA02682220400EC2E79 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76887FA12682223400EC2E79 /* OpenExchangeRatesPayload.swift */,
+				76887FD62682F6C900EC2E79 /* RatesPayload.swift */,
+				76887FD82682F80E00EC2E79 /* DecodingError.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,17 +486,24 @@
 			files = (
 				763713BF2680E75A006452F7 /* SendMoneyViewController.swift in Sources */,
 				763713FE268104F4006452F7 /* RoundedButton.swift in Sources */,
+				76887FA42682247C00EC2E79 /* OpenExchangeRatesServiceError.swift in Sources */,
 				7637141C26815174006452F7 /* FormTextField.swift in Sources */,
 				763714002681051A006452F7 /* NumberTextField.swift in Sources */,
 				763713FB2680F5A7006452F7 /* BaseViewController.swift in Sources */,
 				7637141426814F3D006452F7 /* UIView+Layout.swift in Sources */,
+				76887F9F26821F5500EC2E79 /* Constants.swift in Sources */,
+				76887FA22682223400EC2E79 /* OpenExchangeRatesPayload.swift in Sources */,
+				76887FD52682F42000EC2E79 /* Currency.swift in Sources */,
 				7637141A268150C7006452F7 /* NumberTextField+Rx.swift in Sources */,
 				7637141626814FE5006452F7 /* UITextField+Layout.swift in Sources */,
+				76887FA626822BBB00EC2E79 /* CountryId.swift in Sources */,
 				7637141226814E06006452F7 /* Form.swift in Sources */,
 				7637143626815C16006452F7 /* BindingOperators.swift in Sources */,
+				76887FD92682F80E00EC2E79 /* DecodingError.swift in Sources */,
 				7637143826815E7B006452F7 /* String+Extensions.swift in Sources */,
 				763713F72680F275006452F7 /* SendMoneyViewModel.swift in Sources */,
 				76887F982681E63C00EC2E79 /* CountryPickerViewController+Country.swift in Sources */,
+				76887FD72682F6C900EC2E79 /* RatesPayload.swift in Sources */,
 				76887F8B2681A25800EC2E79 /* Rx+Extensions.swift in Sources */,
 				76887F902681AFFF00EC2E79 /* PhoneNumberKit+Extensions.swift in Sources */,
 				76887F9A2681E65500EC2E79 /* CountryPickerViewController+Cell.swift in Sources */,
@@ -465,6 +512,7 @@
 				7637141E2681523B006452F7 /* FormTextFieldInputType.swift in Sources */,
 				763713BB2680E75A006452F7 /* AppDelegate.swift in Sources */,
 				76887F942681D9C100EC2E79 /* CountryPickerViewController.swift in Sources */,
+				76887F9D26821F4300EC2E79 /* OpenExchangeRatesClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

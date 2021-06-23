@@ -13,6 +13,16 @@ import CoreGraphics
 
 final class SendMoneyViewModel {
 
+    let baseRate: String = Constants.baseRateCurrencyCode
+
+    var rates: [Currency] = []
+
+    // swiftlint:disable line_length
+    var currencies: String {
+        "\(CountryId.kenya.currency),\(CountryId.nigeria.currency),\(CountryId.tanzania.currency),\(CountryId.uganda.currency)"
+    }
+    // swiftlint:enable line_length
+
     let firstnameSubject = BehaviorRelay<String?>(value: nil)
     let lastnameSubject = BehaviorRelay<String?>(value: nil)
     let phoneNumberSubject = BehaviorRelay<String?>(value: nil)
@@ -25,6 +35,8 @@ final class SendMoneyViewModel {
     private let numberTextField = NumberTextField(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
 
     private let disposeBag = DisposeBag()
+
+    let openExchangeRatesClient = OpenExchangeRatesClient()
 
     lazy var submitAction: Action<Void, Form> = {
         Action(enabledIf: sendButtonEnabled.asObservable()) {
@@ -55,7 +67,6 @@ final class SendMoneyViewModel {
     }
 
     init() {
-
         Observable.combineLatest(
             firstnameSubject,
             lastnameSubject,
@@ -63,11 +74,33 @@ final class SendMoneyViewModel {
             amountSubject
         ) { [weak self] (firstname, lastname, number, amount) -> Bool in
             self?.numberTextField.text = number
-            return (!firstname.isNilOrEmpty ) &&
+            return (!firstname.isNilOrEmpty &&
                     !lastname.isNilOrEmpty &&
-                    (!amount.isNilOrEmpty) &&
-                    (!number.isNilOrEmpty ? (self?.numberTextField.isValidNumber ?? false) : true)
+                    !amount.isNilOrEmpty &&
+                    !number.isNilOrEmpty)
+                    // (!number.isNilOrEmpty ? (self?.numberTextField.isValidNumber ?? false) : true)
         } ~> sendButtonEnabled => disposeBag // One-way binding
+
+        getRates()
+    }
+
+    func getRates() {
+        // swiftlint:disable line_length
+        openExchangeRatesClient.getRates(base: baseRate, to: currencies) { [weak self] (result: Result<OpenExchangeRatesPayload, OpenExchangeRatesServiceError>) in
+        // swiftlint:enable line_length
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                self.updateRates(response: response)
+                print("response: \(response)")
+            case .failure(let error):
+                print("error: \(error.localizedDescription)")
+            }
+        }
+    }
+
+    func updateRates(response: OpenExchangeRatesPayload) {
+        rates = response.rates.currencies
     }
 
 }

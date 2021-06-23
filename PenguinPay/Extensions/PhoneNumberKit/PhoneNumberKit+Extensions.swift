@@ -22,7 +22,7 @@ extension PhoneNumberKit {
     }
 
     public func allCountries() -> [String] {
-        return ["NG", "TZ", "KE", "UG"]
+        CountryId.allCases.map { $0.rawValue }
     }
 
 }
