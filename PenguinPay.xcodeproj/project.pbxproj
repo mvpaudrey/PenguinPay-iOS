@@ -16,24 +16,16 @@
 		763713DD2680E75C006452F7 /* PenguinPayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713DC2680E75C006452F7 /* PenguinPayUITests.swift */; };
 		763713EC2680ED82006452F7 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 763713EB2680ED82006452F7 /* IQKeyboardManagerSwift */; };
 		763713EF2680EE6C006452F7 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 763713EE2680EE6C006452F7 /* PhoneNumberKit */; };
-		763713F22680EF2A006452F7 /* Action in Frameworks */ = {isa = PBXBuildFile; productRef = 763713F12680EF2A006452F7 /* Action */; };
 		763713F72680F275006452F7 /* SendMoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713F62680F274006452F7 /* SendMoneyViewModel.swift */; };
 		763713FB2680F5A7006452F7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713FA2680F5A7006452F7 /* BaseViewController.swift */; };
 		763713FE268104F4006452F7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713FD268104F4006452F7 /* RoundedButton.swift */; };
 		763714002681051A006452F7 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763713FF2681051A006452F7 /* NumberTextField.swift */; };
-		7637141226814E06006452F7 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637141126814E06006452F7 /* Form.swift */; };
 		7637141426814F3D006452F7 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637141326814F3D006452F7 /* UIView+Layout.swift */; };
 		7637141626814FE5006452F7 /* UITextField+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637141526814FE5006452F7 /* UITextField+Layout.swift */; };
-		7637141A268150C7006452F7 /* NumberTextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76371419268150C7006452F7 /* NumberTextField+Rx.swift */; };
 		7637141C26815174006452F7 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637141B26815174006452F7 /* FormTextField.swift */; };
 		7637141E2681523B006452F7 /* FormTextFieldInputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637141D2681523B006452F7 /* FormTextFieldInputType.swift */; };
-		7637142C26815722006452F7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7637142B26815722006452F7 /* RxCocoa */; };
-		7637142E26815722006452F7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7637142D26815722006452F7 /* RxSwift */; };
-		7637143026815722006452F7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7637142F26815722006452F7 /* RxRelay */; };
-		7637143626815C16006452F7 /* BindingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637143526815C16006452F7 /* BindingOperators.swift */; };
 		7637143826815E7B006452F7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637143726815E7B006452F7 /* String+Extensions.swift */; };
-		76887F8B2681A25800EC2E79 /* Rx+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F8A2681A25800EC2E79 /* Rx+Extensions.swift */; };
-		76887F8D2681A37E00EC2E79 /* Encodable+Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F8C2681A37E00EC2E79 /* Encodable+Parameters.swift */; };
+		765C3A0C2684F92400C6B4FD /* ObservableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765C3A0B2684F92400C6B4FD /* ObservableLabel.swift */; };
 		76887F902681AFFF00EC2E79 /* PhoneNumberKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F8F2681AFFF00EC2E79 /* PhoneNumberKit+Extensions.swift */; };
 		76887F922681B2AA00EC2E79 /* CustomPhoneNumberMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 76887F912681B2AA00EC2E79 /* CustomPhoneNumberMetadata.json */; };
 		76887F942681D9C100EC2E79 /* CountryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F932681D9C100EC2E79 /* CountryPickerViewController.swift */; };
@@ -44,10 +36,12 @@
 		76887F9F26821F5500EC2E79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887F9E26821F5500EC2E79 /* Constants.swift */; };
 		76887FA22682223400EC2E79 /* OpenExchangeRatesPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FA12682223400EC2E79 /* OpenExchangeRatesPayload.swift */; };
 		76887FA42682247C00EC2E79 /* OpenExchangeRatesServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FA32682247C00EC2E79 /* OpenExchangeRatesServiceError.swift */; };
-		76887FA626822BBB00EC2E79 /* CountryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FA526822BBB00EC2E79 /* CountryId.swift */; };
+		76887FA626822BBB00EC2E79 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FA526822BBB00EC2E79 /* Countries.swift */; };
 		76887FD52682F42000EC2E79 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FD42682F42000EC2E79 /* Currency.swift */; };
 		76887FD72682F6C900EC2E79 /* RatesPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FD62682F6C900EC2E79 /* RatesPayload.swift */; };
 		76887FD92682F80E00EC2E79 /* DecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FD82682F80E00EC2E79 /* DecodingError.swift */; };
+		76887FDF2683738D00EC2E79 /* DynamicTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FDE2683738D00EC2E79 /* DynamicTypes.swift */; };
+		76887FE826846F9D00EC2E79 /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76887FE726846F9D00EC2E79 /* StringExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,16 +79,12 @@
 		763713FA2680F5A7006452F7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		763713FD268104F4006452F7 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		763713FF2681051A006452F7 /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
-		7637141126814E06006452F7 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		7637141326814F3D006452F7 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		7637141526814FE5006452F7 /* UITextField+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Layout.swift"; sourceTree = "<group>"; };
-		76371419268150C7006452F7 /* NumberTextField+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberTextField+Rx.swift"; sourceTree = "<group>"; };
 		7637141B26815174006452F7 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		7637141D2681523B006452F7 /* FormTextFieldInputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldInputType.swift; sourceTree = "<group>"; };
-		7637143526815C16006452F7 /* BindingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingOperators.swift; sourceTree = "<group>"; };
 		7637143726815E7B006452F7 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		76887F8A2681A25800EC2E79 /* Rx+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Extensions.swift"; sourceTree = "<group>"; };
-		76887F8C2681A37E00EC2E79 /* Encodable+Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Parameters.swift"; sourceTree = "<group>"; };
+		765C3A0B2684F92400C6B4FD /* ObservableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableLabel.swift; sourceTree = "<group>"; };
 		76887F8F2681AFFF00EC2E79 /* PhoneNumberKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneNumberKit+Extensions.swift"; sourceTree = "<group>"; };
 		76887F912681B2AA00EC2E79 /* CustomPhoneNumberMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CustomPhoneNumberMetadata.json; sourceTree = "<group>"; };
 		76887F932681D9C100EC2E79 /* CountryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewController.swift; sourceTree = "<group>"; };
@@ -105,10 +95,12 @@
 		76887F9E26821F5500EC2E79 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		76887FA12682223400EC2E79 /* OpenExchangeRatesPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRatesPayload.swift; sourceTree = "<group>"; };
 		76887FA32682247C00EC2E79 /* OpenExchangeRatesServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenExchangeRatesServiceError.swift; sourceTree = "<group>"; };
-		76887FA526822BBB00EC2E79 /* CountryId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryId.swift; sourceTree = "<group>"; };
+		76887FA526822BBB00EC2E79 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		76887FD42682F42000EC2E79 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		76887FD62682F6C900EC2E79 /* RatesPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesPayload.swift; sourceTree = "<group>"; };
 		76887FD82682F80E00EC2E79 /* DecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingError.swift; sourceTree = "<group>"; };
+		76887FDE2683738D00EC2E79 /* DynamicTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTypes.swift; sourceTree = "<group>"; };
+		76887FE726846F9D00EC2E79 /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7637143026815722006452F7 /* RxRelay in Frameworks */,
 				763713EC2680ED82006452F7 /* IQKeyboardManagerSwift in Frameworks */,
 				763713EF2680EE6C006452F7 /* PhoneNumberKit in Frameworks */,
-				7637142E26815722006452F7 /* RxSwift in Frameworks */,
-				7637142C26815722006452F7 /* RxCocoa in Frameworks */,
-				763713F22680EF2A006452F7 /* Action in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +172,7 @@
 			children = (
 				763713D12680E75C006452F7 /* PenguinPayTests.swift */,
 				763713D32680E75C006452F7 /* Info.plist */,
+				76887FE726846F9D00EC2E79 /* StringExtensionsTests.swift */,
 			);
 			path = PenguinPayTests;
 			sourceTree = "<group>";
@@ -230,6 +219,7 @@
 				763713FF2681051A006452F7 /* NumberTextField.swift */,
 				7637141B26815174006452F7 /* FormTextField.swift */,
 				7637141D2681523B006452F7 /* FormTextFieldInputType.swift */,
+				765C3A0B2684F92400C6B4FD /* ObservableLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -237,8 +227,6 @@
 		7637140326810609006452F7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				76887F8C2681A37E00EC2E79 /* Encodable+Parameters.swift */,
-				76887F892681A24400EC2E79 /* Rx */,
 				7637143126815933006452F7 /* Foundation */,
 				7637140426810617006452F7 /* UIKit */,
 				76887F8E2681AFCC00EC2E79 /* PhoneNumberKit */,
@@ -251,7 +239,6 @@
 			children = (
 				7637141326814F3D006452F7 /* UIView+Layout.swift */,
 				7637141526814FE5006452F7 /* UITextField+Layout.swift */,
-				76371419268150C7006452F7 /* NumberTextField+Rx.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -260,8 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				76887FD42682F42000EC2E79 /* Currency.swift */,
-				7637141126814E06006452F7 /* Form.swift */,
-				76887FA526822BBB00EC2E79 /* CountryId.swift */,
+				76887FA526822BBB00EC2E79 /* Countries.swift */,
 			);
 			path = DomainModels;
 			sourceTree = "<group>";
@@ -277,17 +263,9 @@
 		7637143426815BFD006452F7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7637143526815C16006452F7 /* BindingOperators.swift */,
+				76887FDE2683738D00EC2E79 /* DynamicTypes.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		76887F892681A24400EC2E79 /* Rx */ = {
-			isa = PBXGroup;
-			children = (
-				76887F8A2681A25800EC2E79 /* Rx+Extensions.swift */,
-			);
-			path = Rx;
 			sourceTree = "<group>";
 		};
 		76887F8E2681AFCC00EC2E79 /* PhoneNumberKit */ = {
@@ -337,10 +315,6 @@
 			packageProductDependencies = (
 				763713EB2680ED82006452F7 /* IQKeyboardManagerSwift */,
 				763713EE2680EE6C006452F7 /* PhoneNumberKit */,
-				763713F12680EF2A006452F7 /* Action */,
-				7637142B26815722006452F7 /* RxCocoa */,
-				7637142D26815722006452F7 /* RxSwift */,
-				7637142F26815722006452F7 /* RxRelay */,
 			);
 			productName = PenguinPay;
 			productReference = 763713B72680E75A006452F7 /* PenguinPay.app */;
@@ -416,8 +390,6 @@
 			packageReferences = (
 				763713EA2680ED82006452F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				763713ED2680EE6C006452F7 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
-				763713F02680EF2A006452F7 /* XCRemoteSwiftPackageReference "Action" */,
-				7637142A26815722006452F7 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 763713B82680E75A006452F7 /* Products */;
 			projectDirPath = "";
@@ -494,21 +466,18 @@
 				76887F9F26821F5500EC2E79 /* Constants.swift in Sources */,
 				76887FA22682223400EC2E79 /* OpenExchangeRatesPayload.swift in Sources */,
 				76887FD52682F42000EC2E79 /* Currency.swift in Sources */,
-				7637141A268150C7006452F7 /* NumberTextField+Rx.swift in Sources */,
 				7637141626814FE5006452F7 /* UITextField+Layout.swift in Sources */,
-				76887FA626822BBB00EC2E79 /* CountryId.swift in Sources */,
-				7637141226814E06006452F7 /* Form.swift in Sources */,
-				7637143626815C16006452F7 /* BindingOperators.swift in Sources */,
+				76887FA626822BBB00EC2E79 /* Countries.swift in Sources */,
 				76887FD92682F80E00EC2E79 /* DecodingError.swift in Sources */,
 				7637143826815E7B006452F7 /* String+Extensions.swift in Sources */,
 				763713F72680F275006452F7 /* SendMoneyViewModel.swift in Sources */,
 				76887F982681E63C00EC2E79 /* CountryPickerViewController+Country.swift in Sources */,
 				76887FD72682F6C900EC2E79 /* RatesPayload.swift in Sources */,
-				76887F8B2681A25800EC2E79 /* Rx+Extensions.swift in Sources */,
 				76887F902681AFFF00EC2E79 /* PhoneNumberKit+Extensions.swift in Sources */,
 				76887F9A2681E65500EC2E79 /* CountryPickerViewController+Cell.swift in Sources */,
 				76887F962681DB2A00EC2E79 /* CountryPickerViewModel.swift in Sources */,
-				76887F8D2681A37E00EC2E79 /* Encodable+Parameters.swift in Sources */,
+				765C3A0C2684F92400C6B4FD /* ObservableLabel.swift in Sources */,
+				76887FDF2683738D00EC2E79 /* DynamicTypes.swift in Sources */,
 				7637141E2681523B006452F7 /* FormTextFieldInputType.swift in Sources */,
 				763713BB2680E75A006452F7 /* AppDelegate.swift in Sources */,
 				76887F942681D9C100EC2E79 /* CountryPickerViewController.swift in Sources */,
@@ -520,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76887FE826846F9D00EC2E79 /* StringExtensionsTests.swift in Sources */,
 				763713D22680E75C006452F7 /* PenguinPayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,22 +833,6 @@
 				minimumVersion = 3.3.3;
 			};
 		};
-		763713F02680EF2A006452F7 /* XCRemoteSwiftPackageReference "Action" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/Action.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.3.0;
-			};
-		};
-		7637142A26815722006452F7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.2.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -891,26 +845,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 763713ED2680EE6C006452F7 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
 			productName = PhoneNumberKit;
-		};
-		763713F12680EF2A006452F7 /* Action */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 763713F02680EF2A006452F7 /* XCRemoteSwiftPackageReference "Action" */;
-			productName = Action;
-		};
-		7637142B26815722006452F7 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7637142A26815722006452F7 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		7637142D26815722006452F7 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7637142A26815722006452F7 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		7637142F26815722006452F7 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7637142A26815722006452F7 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

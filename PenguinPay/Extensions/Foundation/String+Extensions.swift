@@ -16,18 +16,15 @@ extension String {
     }
 
     func isEmpty() -> Bool {
-        trim().count == 0
+        count == 0
     }
 
     var isNumeric: Bool {
         return !(self.isEmpty) && self.allSatisfy { $0.isNumber }
     }
 
-    func isValidName() -> Bool {
-
-        let nameRegEx = "^[A-Za-z]+(?:\\s[A-Za-z]+)"
-        let nameTest = NSPredicate(format: "SELF MATCHES %@", nameRegEx)
-        return trim().count > 0 && nameTest.evaluate(with: self)
+    var asBinaryInt: Int? {
+        Int(self.trim(), radix: 2)
     }
 
 }
@@ -42,7 +39,8 @@ extension Optional where Wrapped == String {
 public extension Optional where Wrapped == String {
 
     var isNilOrEmpty: Bool {
-        return self == nil || ((self?.isEmpty) == nil)
+        guard let self = self else { return true }
+        return self.isEmpty
     }
 
 }

@@ -16,14 +16,6 @@ extension UITextField {
         setupRoundedLayout()
     }
 
-    func leftViewPadding() {
-
-        let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 10, height: frame.size.height))
-        view.backgroundColor = UIColor.clear
-        leftView = view
-        leftViewMode = .always
-    }
-
     func updateInputType(_ type: FormTextFieldInputType) {
         switch type {
         case .firstname, .lastname:

@@ -35,7 +35,6 @@ public class RoundedButton: UIButton {
         setTitle(titleLabel?.text, for: .normal)
         setTitle(titleLabel?.text, for: .disabled)
         setTitleColor(.white, for: .disabled)
-        backgroundColor = .blue
         layer.masksToBounds = true
     }
 

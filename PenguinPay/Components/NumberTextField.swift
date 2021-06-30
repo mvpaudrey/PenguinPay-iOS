@@ -10,6 +10,10 @@ import PhoneNumberKit
 
 public class NumberTextField: PhoneNumberTextField {
 
+    var selectedCurrency: String = "USD"
+
+    var textChanged: (String) -> Void = { _ in }
+
     public override var defaultRegion: String {
         get { "NG" }
         set { self.partialFormatter.defaultRegion = newValue }
@@ -47,6 +51,18 @@ public class NumberTextField: PhoneNumberTextField {
         containingViewController?.present(nav, animated: true)
     }
 
+    func bind(completion :@escaping (String) -> Void) {
+        self.textChanged = completion
+    }
+
+    @objc func textFieldDidChange(_ textField: UITextField) {
+
+        guard let text = textField.text else {
+            return
+        }
+        self.textChanged(text)
+    }
+
     /// ContainingViewController looks at the responder chain to find the view controller nearest to itself
     var containingViewController: UIViewController? {
         var responder: UIResponder? = self
@@ -78,14 +94,17 @@ extension NumberTextField: CountryPickerDelegate {
         text = isEditing ? "+" + country.prefix : ""
         defaultRegion = country.code
         partialFormatter.defaultRegion = country.code
+        selectedCurrency = currencyForCountry(country.name)
         updateFlag()
         updatePlaceholder()
+        containingViewController?.dismiss(animated: true)
+    }
 
-        if let nav = containingViewController?.navigationController,
-           !PhoneNumberKit.CountryCodePicker.forceModalPresentation {
-            nav.popViewController(animated: true)
-        } else {
-            containingViewController?.dismiss(animated: true)
-        }
+    private func currencyForCountry(_ name: String) -> String {
+        let defaultCurrency = "USD"
+        let matchedCountry = Countries.allCases.first { $0.name == name }
+        guard let country = matchedCountry else { return defaultCurrency }
+        selectedCurrency = country.currency
+        return country.currency
     }
 }

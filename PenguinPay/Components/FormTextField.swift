@@ -9,6 +9,8 @@ import UIKit
 
 open class FormTextField: UITextField {
 
+    var textChanged: (String) -> Void = { _ in }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -47,9 +49,17 @@ open class FormTextField: UITextField {
 
 extension FormTextField: UITextFieldDelegate {
 
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    func bind(completion :@escaping (String) -> Void) {
+
+        self.textChanged = completion
+        self.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
 
+    @objc func textFieldDidChange(_ textField: UITextField) {
+
+        guard let text = textField.text else {
+            return
+        }
+        self.textChanged(text)
+    }
 }
