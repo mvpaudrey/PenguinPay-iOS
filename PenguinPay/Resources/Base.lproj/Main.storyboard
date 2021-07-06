@@ -128,26 +128,28 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgW-AB-I25">
                                                                 <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-0q-QMr" userLabel="Recipient Amount Label">
-                                                                        <rect key="frame" x="10" y="0.0" width="254" height="50"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Recipient amount received" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-AN-Z4Z" userLabel="Recipient Amount Text Field" customClass="FormTextField" customModule="PenguinPay" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <outlet property="delegate" destination="7m5-mh-GQH" id="F4B-sG-H6l"/>
+                                                                        </connections>
+                                                                    </textField>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="AiY-0q-QMr" secondAttribute="trailing" constant="10" id="9dE-up-lgA"/>
-                                                                    <constraint firstItem="AiY-0q-QMr" firstAttribute="leading" secondItem="dgW-AB-I25" secondAttribute="leading" constant="10" id="cdm-rj-e5g"/>
-                                                                    <constraint firstItem="AiY-0q-QMr" firstAttribute="top" secondItem="dgW-AB-I25" secondAttribute="top" id="lLc-ps-NTp"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="AiY-0q-QMr" secondAttribute="bottom" id="ruF-mx-frc"/>
+                                                                    <constraint firstItem="Icl-AN-Z4Z" firstAttribute="leading" secondItem="dgW-AB-I25" secondAttribute="leading" id="69l-pL-bFL"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Icl-AN-Z4Z" secondAttribute="bottom" id="LfS-7B-g1d"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Icl-AN-Z4Z" secondAttribute="trailing" id="oww-Ia-d4c"/>
+                                                                    <constraint firstItem="Icl-AN-Z4Z" firstAttribute="top" secondItem="dgW-AB-I25" secondAttribute="top" id="wMT-hM-9cL"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJf-l1-VBw">
                                                                 <rect key="frame" x="284" y="0.0" width="50" height="50"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMp-kU-BBM" userLabel="Recipient Currency Label" customClass="ObservableLabel" customModule="PenguinPay" customModuleProvider="target">
-                                                                        <rect key="frame" x="4" y="13" width="42" height="24"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMp-kU-BBM" userLabel="Recipient Currency Label" customClass="ObservableLabel" customModule="PenguinPay" customModuleProvider="target">
+                                                                        <rect key="frame" x="25" y="25" width="0.0" height="0.0"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -218,7 +220,7 @@
                         <outlet property="lastnameTextField" destination="chz-Ai-TQc" id="5oH-L5-ia1"/>
                         <outlet property="oneButton" destination="ybB-nz-FtI" id="fy8-Jw-EaN"/>
                         <outlet property="phoneNumberTextField" destination="FWD-uX-mCr" id="1bU-4I-fru"/>
-                        <outlet property="recipientAmountLabel" destination="AiY-0q-QMr" id="R4S-1e-vpU"/>
+                        <outlet property="recipientAmountTextField" destination="Icl-AN-Z4Z" id="af5-hM-vlM"/>
                         <outlet property="recipientCurrencyLabel" destination="BMp-kU-BBM" id="FeK-FB-LM1"/>
                         <outlet property="sendButton" destination="tP5-hg-WQ9" id="J1e-I4-O7h"/>
                         <outlet property="zeroButton" destination="B6Y-Rs-zTJ" id="wV7-2T-acY"/>

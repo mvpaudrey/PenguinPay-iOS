@@ -40,3 +40,11 @@ enum Countries: String, CaseIterable {
         }
     }
 }
+
+extension Countries {
+
+    static func findCountryArea(with rawValue: String) -> Countries? {
+        Countries.allCases.first { $0.rawValue == rawValue }
+    }
+
+}

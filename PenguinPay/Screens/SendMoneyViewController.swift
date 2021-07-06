@@ -37,7 +37,12 @@ class SendMoneyViewController: BaseViewController {
         }
     }
 
-    @IBOutlet weak var recipientAmountLabel: UILabel!
+    @IBOutlet weak var recipientAmountTextField: FormTextField! {
+        didSet {
+            self.recipientAmountTextField.bind { self.viewModel.recipientBinarianMoney.value = $0 }
+        }
+    }
+
     @IBOutlet weak var currencyLabel: UILabel!
 
     @IBOutlet weak var zeroButton: RoundedButton!
@@ -65,6 +70,9 @@ class SendMoneyViewController: BaseViewController {
         phoneNumberTextField.addTarget(phoneNumberTextField,
                                        action: #selector(textFieldDidChange),
                                        for: .editingChanged)
+        phoneNumberTextField.numberDelegate = self
+
+        viewModel.updateCurrency(code: phoneNumberTextField.defaultRegion)
 
         amountTextField.inputType = .decimal
         amountTextField.returnKeyType = .done
@@ -80,17 +88,22 @@ class SendMoneyViewController: BaseViewController {
         deleteButton.addTarget(self, action: #selector(deleteBackward), for: .touchUpInside)
         addLongPressGestureToDeleteButton()
 
-        recipientCurrencyLabel.text = phoneNumberTextField.selectedCurrency
         recipientCurrencyLabel.textDidChange = { text in
             self.viewModel.currencyName.value = text
-            print("Currency name: \(String(describing: text))")
+            print("Currency Code: \(String(describing: text))")
         }
 
-        sendButton.backgroundColor = viewModel.isValid ? .blue : .gray
+        recipientAmountTextField.isUserInteractionEnabled = false
+
+        updateSendButton()
     }
 
     private func updateRecipientCurrencyLabel(currency: String?) {
         recipientCurrencyLabel.text = currency
+    }
+
+    private func updateSendButton() {
+        sendButton.backgroundColor = viewModel.isValid ? .blue : .gray
     }
 
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -98,25 +111,33 @@ class SendMoneyViewController: BaseViewController {
             return
         }
         print("textChanged \(text)")
-        // self.textChanged(text)
     }
 
     @objc private func addZeroToTextField() {
         amountTextField.text?.append("0")
+        updateRecipientAmountField()
     }
 
     @objc private func addOneToTextField() {
         amountTextField.text?.append("1")
+        updateRecipientAmountField()
     }
 
     @objc private func deleteBackward() {
         amountTextField.text?.removeLast()
+        updateRecipientAmountField()
     }
 
     @objc func longPress(gesture: UILongPressGestureRecognizer) {
         if gesture.state == UIGestureRecognizer.State.began {
             amountTextField.text?.removeAll()
         }
+        updateRecipientAmountField()
+    }
+
+    private func updateRecipientAmountField() {
+        updateRecipientAmount(with: amountTextField.text)
+        updateSendButton()
     }
 
     private func addLongPressGestureToDeleteButton() {
@@ -125,6 +146,29 @@ class SendMoneyViewController: BaseViewController {
         deleteButton.addGestureRecognizer(longPress)
     }
 
+    func updateRecipientAmount(with text: String?, currencyCode: String? = nil) {
+        let recipientAmount = viewModel.computeCurrencyRateInBinary(amount: text)
+        recipientAmountTextField.text = "\(recipientAmount)"
+        recipientCurrencyLabel.text = viewModel.currencyName.value
+    }
+
+}
+
+extension SendMoneyViewController: NumberTextFieldDelegate {
+
+    func didUpdateCountry(_ country: Country) {
+        print("Country updated to: \(country)")
+        guard let newCountry = Countries(rawValue: country.code) else { return }
+        print("newCurrency: \(newCountry.currency)")
+        print("newCountry name: \(newCountry.name)")
+        viewModel.updateCurrency(code: country.code)
+        updateRecipientAmount(with: amountTextField.text, currencyCode: newCountry.currency)
+    }
+
+    func numberDidChange(valid: Bool) {
+        viewModel.isPhoneNumberValid = valid
+        updateSendButton()
+    }
 }
 
 extension SendMoneyViewController: UITextFieldDelegate {
@@ -132,7 +176,7 @@ extension SendMoneyViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-        print("Hey")
+        updateSendButton()
         return true
     }
 

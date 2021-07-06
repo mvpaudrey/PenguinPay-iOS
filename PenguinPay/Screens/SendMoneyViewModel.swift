@@ -25,6 +25,8 @@ final class SendMoneyViewModel: SendMoneyViewModelProtocol {
 
     var binarianMoney = Dynamic<String>(.empty)
 
+    var recipientBinarianMoney = Dynamic<String>(.empty)
+
     var currencyName = Dynamic<String>(.empty)
 
     // MARK: - Exchange rates
@@ -35,6 +37,10 @@ final class SendMoneyViewModel: SendMoneyViewModelProtocol {
 
     var rates: [Currency] = []
 
+    var currentCode: String = .empty
+
+    var selectedCurrency: Currency?
+
     // swiftlint:disable line_length
     var currencies: String {
         "\(Countries.kenya.currency),\(Countries.nigeria.currency),\(Countries.tanzania.currency),\(Countries.uganda.currency)"
@@ -44,7 +50,7 @@ final class SendMoneyViewModel: SendMoneyViewModelProtocol {
     // MARK: - Initialization
 
     init() {
-        // getRates()
+        getRates()
     }
 
     // MARK: - Form validation
@@ -52,9 +58,11 @@ final class SendMoneyViewModel: SendMoneyViewModelProtocol {
     var isValid: Bool {
         !firstname.value.isNilOrEmpty &&
             !lastname.value.isNilOrEmpty &&
-            !phoneNumber.value.isNilOrEmpty &&
+            isPhoneNumberValid &&
             !binarianMoney.value.isNilOrEmpty
     }
+
+    var isPhoneNumberValid: Bool = false
 
     func getRates() {
         // swiftlint:disable line_length
@@ -71,8 +79,36 @@ final class SendMoneyViewModel: SendMoneyViewModelProtocol {
         }
     }
 
-    func updateRates(response: OpenExchangeRatesPayload) {
+    func updateCurrency(code: String) {
+        currentCode = code
+        if rates.count > 0 {
+            guard let countryArea = Countries.findCountryArea(with: code),
+                  let currency = rates.findCurrency(with: countryArea.currency) else {
+                selectedCurrency = nil
+                return
+            }
+            selectedCurrency = currency
+        }
+    }
+
+    // Move this logic to a proper extension
+    func computeCurrencyRateInBinary(amount: String?) -> String {
+        guard let amount = amount,
+              let amountInInt = Int(amount) else { return .empty }
+        print("amountInInt: \(amountInInt)")
+        guard let integer = Int(amount, radix: 2),
+              let currency = selectedCurrency else { return .empty }
+        let amountWithConversionRate = Int(ceil(Double(integer) * currency.rate)) // Not the best solution
+        currencyName.value = currency.name
+        // Move back to binary
+        return String(amountWithConversionRate, radix: 2)
+    }
+
+    // MARK: - Private methods
+
+    private func updateRates(response: OpenExchangeRatesPayload) {
         rates = response.rates.currencies
+        updateCurrency(code: currentCode)
     }
 
 }

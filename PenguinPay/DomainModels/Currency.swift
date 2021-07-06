@@ -14,3 +14,11 @@ struct Currency {
     let rate: Double
 
 }
+
+extension Array where Element == Currency {
+
+    func findCurrency(with name: String) -> Currency? {
+        first {  $0.name == name }
+    }
+
+}

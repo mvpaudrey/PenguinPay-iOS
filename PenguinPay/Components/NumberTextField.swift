@@ -8,11 +8,19 @@
 import UIKit
 import PhoneNumberKit
 
+protocol NumberTextFieldDelegate: AnyObject {
+
+    func didUpdateCountry(_ country: Country)
+    func numberDidChange(valid: Bool)
+}
+
 public class NumberTextField: PhoneNumberTextField {
 
-    var selectedCurrency: String = "USD"
+    var textChanged: (String) -> Void = { _ in
+        print("TextChanged in NumberTextField")
+    }
 
-    var textChanged: (String) -> Void = { _ in }
+    weak var numberDelegate: NumberTextFieldDelegate?
 
     public override var defaultRegion: String {
         get { "NG" }
@@ -61,6 +69,7 @@ public class NumberTextField: PhoneNumberTextField {
             return
         }
         self.textChanged(text)
+        numberDelegate?.numberDidChange(valid: isValidNumber)
     }
 
     /// ContainingViewController looks at the responder chain to find the view controller nearest to itself
@@ -94,17 +103,10 @@ extension NumberTextField: CountryPickerDelegate {
         text = isEditing ? "+" + country.prefix : ""
         defaultRegion = country.code
         partialFormatter.defaultRegion = country.code
-        selectedCurrency = currencyForCountry(country.name)
         updateFlag()
         updatePlaceholder()
+        numberDelegate?.didUpdateCountry(country)
         containingViewController?.dismiss(animated: true)
     }
 
-    private func currencyForCountry(_ name: String) -> String {
-        let defaultCurrency = "USD"
-        let matchedCountry = Countries.allCases.first { $0.name == name }
-        guard let country = matchedCountry else { return defaultCurrency }
-        selectedCurrency = country.currency
-        return country.currency
-    }
 }
