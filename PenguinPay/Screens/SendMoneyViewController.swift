@@ -74,8 +74,6 @@ class SendMoneyViewController: BaseViewController {
 
         viewModel.updateCurrency(code: phoneNumberTextField.defaultRegion)
 
-        amountTextField.inputType = .decimal
-        amountTextField.returnKeyType = .done
         amountTextField.isUserInteractionEnabled = false
 
         zeroButton.backgroundColor = .blue

@@ -93,6 +93,7 @@ final class SendMoneyViewModel: SendMoneyViewModelProtocol {
 
     // Move this logic to a proper extension
     func computeCurrencyRateInBinary(amount: String?) -> String {
+        binarianMoney.value = amount
         guard let amount = amount,
               let amountInInt = Int(amount) else { return .empty }
         print("amountInInt: \(amountInInt)")

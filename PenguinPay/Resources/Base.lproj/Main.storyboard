@@ -73,7 +73,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <outlet property="delegate" destination="7m5-mh-GQH" id="jrM-Yb-axL"/>
+                                                                    <outlet property="delegate" destination="7m5-mh-GQH" id="HKu-Dg-xPv"/>
                                                                 </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH3-6L-xTq">
@@ -132,9 +132,6 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
-                                                                        <connections>
-                                                                            <outlet property="delegate" destination="7m5-mh-GQH" id="F4B-sG-H6l"/>
-                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
