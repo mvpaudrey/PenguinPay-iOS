@@ -95,6 +95,7 @@ class SendMoneyViewController: BaseViewController {
 
         recipientAmountTextField.isUserInteractionEnabled = false
 
+        sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
         updateSendButton()
     }
 
@@ -104,6 +105,7 @@ class SendMoneyViewController: BaseViewController {
 
     private func updateSendButton() {
         sendButton.backgroundColor = viewModel.isValid ? .blue : .gray
+        sendButton.isEnabled = viewModel.isValid
     }
 
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -133,6 +135,13 @@ class SendMoneyViewController: BaseViewController {
             amountTextField.text?.removeAll()
         }
         updateRecipientAmountField()
+    }
+
+    @objc func sendButtonTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Sendwave", message: "All Good ☺️.\nThanks for reviewing 👏🏾.",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true)
     }
 
     private func updateRecipientAmountField() {
