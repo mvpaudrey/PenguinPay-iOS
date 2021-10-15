@@ -1,5 +1,5 @@
-# Sendwave-iOS
-Sendwave Technical Test
+# PenguinPay-iOS
+Technical Test
 
 ## Architecture
 I went for an MVVM architecture on this test. I also think it serves its purpose for the assignment so that I can show what I can do in terms of code structure and my way of decoupiling things.
